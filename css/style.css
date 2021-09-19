@@ -1,0 +1,527 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #1C2C40;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 400;
+}
+body.active {
+    background: #000;
+    /* color: #fff; */
+}
+input,textarea,select{
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+a{
+	color: #1C2C40;
+}
+a:hover,.submit:hover{
+	filter: alpha(opacity = 85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+	opacity: 0.85;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: "GT-Eesti", Arial;
+	font-weight: 400;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width:1040px;
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Light.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Medium.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT-Eesti';
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff2") format("woff2");
+    src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff") format("woff"), url("../fonts/GT-Eesti-Pro-Text-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+::placeholder {
+  color: #C0CCDA;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #C0CCDA;
+}
+::-ms-input-placeholder {
+  color: #C0CCDA;
+}
+hr {
+    width: 100%;
+    border-bottom:  2px solid #000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+body {
+    background: #000;
+    /* position: relative; */
+}
+body div.menu.active {
+    top: 320px;
+    right: 118px;
+    transition: 1s ease;
+}
+body div.menu {
+    position: fixed; 
+    top: 320px;
+    right: -180px;
+    transition: .5s ease;
+}
+body div.menu ul {
+    
+}
+body div.menu ul li {
+    margin-bottom: 30px;
+}
+body div.menu ul li a {
+    font-size: 24px;
+    font-weight: 600;
+}
+body div.menu ul li a i {
+    
+}
+#home {
+    transition: transform 0.5s linear;
+    background: url(../images/body_bg.png) no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    position: relative;
+}
+#home.active {
+    transform-origin: top right;
+    transform: rotate(30deg);
+    /* transition: .5s ease; */
+}
+#home.revers {
+    transform-origin: top right;
+    transform: rotate(0deg);
+    /* transition: .5s ease; */
+}
+#home header div.right div.image-container.active {
+    transform-origin: top right;
+    transform: rotate(-30deg);
+}
+#home header div.right div.image-container.revers {
+    transform-origin: top right;
+    transform: rotate(0deg);
+}
+header div.right div.menu-icon.active {
+    transform-origin:top right;
+    transform: rotate(90deg);
+}
+header div.right div.menu-icon.revers {
+    transform-origin:top right;
+    transform: rotate(0deg);
+}
+header div.right div.menu-icon {
+    transition: transform 0.5s linear;
+}
+#home header div.right div.image-container {
+    transition: transform 0.5s linear;
+}
+header div.left {
+    width: 50%;
+}
+header div.left div.image-container {
+    width: 120px;
+}
+header div.left div.image-container img {
+    display: block;
+    width: 100%;
+}
+header div.right {
+    width: 50%;
+    z-index: 1;
+}
+header div.right div.menu-icon {
+    width: 30px;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: none;
+}
+header div.right div.menu-icon img {
+    display: block;
+    width: 100%;
+}
+header div.right ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header div.right ul li { 
+    margin-right: 40px;
+}
+header div.right ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+header div.right ul li:last-child {
+    margin-right: 50px;
+}
+header div.right div.image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+}
+header div.right div.image-container img {
+    display: block;
+    width: 100%;
+}
+header div.right span.close.active {
+    transform-origin:top right;
+    transform: rotate(60deg);
+}
+header div.right span.close.revers {
+    transform-origin:top right;
+    transform: rotate(0deg);
+}
+header div.right span.close {
+    position: absolute;
+    top: 75px;
+    right: -25px;
+    transition: transform 0.5s linear;
+}
+header div.right span.close .fa-times {
+    font-size: 30px;
+}
+#spotlight {
+    padding: 50px 0;
+}
+#spotlight div.top {
+    margin-bottom: 50px;
+}
+#spotlight div.top div.image-container {
+    width: 70%;
+    margin: 0 auto;
+}
+#spotlight div.top div.image-container img {
+    display: block;
+    width: 100%;
+}
+#spotlight div.bottom {
+    text-align: center;
+}
+#spotlight div.bottom h3 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#spotlight div.bottom a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+}
+#photo {
+    padding: 50px 0;
+}
+#photo div.top {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#photo div.top h3 {
+    font-size: 34px;
+    font-weight: 700;
+}
+#photo div.top h3 span {
+    color: red;
+    font-size: 34px;
+    font-weight: 700;
+}
+#photo div.top p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+#photo div.bottom {
+
+}
+#photo div.bottom div.items {
+    
+}
+#photo  div.bottom div.items div.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#photo div.bottom div.items div.item div.left {
+    width: 40%;
+    
+}
+#photo div.bottom div.items div.item div.left div.image-container {
+    width: 60%;
+    margin: 0 auto;
+}
+#photo div.bottom div.items div.item div.left div.image-container img {
+    display: block;
+    width: 100%;
+    box-shadow: -1px -1px 8px #000;
+}
+#photo div.bottom div.items div.item div.right {
+    width: 60%;
+}
+#photo div.bottom div.items div.item div.right h5 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#photo div.bottom div.items div.item div.right p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#photo div.bottom div.items div.item div.right a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+}
+#about {
+    text-align: center;
+    padding: 50px 0;
+}
+#about h3 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#about h3 span {
+    color: red;
+    font-size: 38px;
+    font-weight: 700;
+}
+#about p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#about a {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    background: #000;
+}
+#testimonial {
+    padding: 50px 0;
+}
+#testimonial div.top {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#testimonial div.top h3 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#testimonial div.top p {
+    font-size: 18px;
+} 
+#testimonial div.bottom {
+    margin: 50px;
+}
+#testimonial div.bottom div.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#testimonial div.bottom div.left {
+    width: 30%;
+}
+#testimonial div.bottom div.left div.image-container {
+    width: 60%;
+    margin-left: auto;
+}
+#testimonial div.bottom div.left div.image-container img {
+    display: block;
+    width: 100%;
+}
+#testimonial div.bottom div.right {
+    width: 60%;
+    text-align: left;
+}
+#testimonial div.bottom div.right h5 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+#testimonial div.bottom div.right p {
+    font-size: 18px;
+    width: 90%;
+}
+#contact {
+    padding: 50px 0;
+}
+#contact .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#contact div.left {
+    width: 45%;
+    z-index: 2;
+}
+#contact div.left h3 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#contact div.left p {
+    font-size: 18px;
+    margin-bottom: 100px;
+}
+#contact div.right {
+    width: 45%;
+    text-align: center;
+}
+#contact div.right form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+#contact div.right form input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+#contact div.right form input::placeholder {
+    font-size: 18px;
+}
+#contact div.right form textarea {
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+    width: 100%;
+}
+#contact div.right form textarea::placeholder {
+    font-size: 18px;
+}
+#contact div.right a.button {
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    width: 50%;
+}
+footer {
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+footer div.image-container {
+    width: 100px;
+    position: absolute;
+    bottom: 220px;
+    left: -30px;
+}
+footer div.image-container img {
+    display: block;
+    width: 100%;
+    position: absolute;
+}
+footer p {
+    font-size: 18px;
+}
+@media all and (max-width:1080px) {
+    #spotlight div.top div.image-container {
+        width: 60%;
+    }
+    header div.right div.image-container {
+        width: 30%;
+    }
+}
+@media all and (max-width:980px) {
+    header div.right ul li:last-child {
+        margin-right: 0;
+    }
+    header div.right ul li {
+        margin-right: 32px;
+    }
+    header div.right div.image-container {
+        width: 30%;
+    }
+}
+@media all and (max-width:768px) {
+    header div.right ul li a {
+        font-size: 14px;
+    }
+}
+@media all and (max-width:640px) {
+    header div.right ul {
+        display: none;
+    }
+    header div.right div.menu-icon {
+        display: block;
+    }
+}
