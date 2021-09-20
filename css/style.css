@@ -525,3 +525,119 @@ footer p {
         display: block;
     }
 }
+@media all and (max-width:480px){
+    #photo div.bottom div.items div.item {
+        flex-direction: column;
+    }
+    #photo div.bottom div.items div.item div.left {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    #photo div.bottom div.items div.item div.right {
+        width: 90%;
+        text-align: center;
+    }
+    #testimonial div.bottom div.item {
+        flex-direction: column;
+    }
+    #testimonial div.bottom div.left {
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    #testimonial div.bottom div.left div.image-container {
+        width: 100%;
+    }
+    #testimonial div.bottom div.right {
+        width: 90%;
+        text-align: center;
+    }
+    #testimonial div.bottom div.right p {
+        width: 100%;
+    }
+    #contact .wrapper {
+        flex-direction: column;
+    }
+    #contact div.right form {
+        width: 100%;
+    }
+    #contact div.right {
+        width: 90%;
+        text-align: center;
+    }
+    #contact div.left {
+        width: 90%;
+        text-align: center;
+    }
+    #contact div.left p {
+        margin-bottom: 20px;
+    }
+    footer p {
+        font-size: 14px;
+    }
+    footer {
+        padding: 10px;
+    }
+    footer div.image-container {
+        width: 82px;
+        bottom: 165px;
+    }
+}
+@media all and (max-width:360px) {
+    header div.right div.menu-icon {
+        width: 26px;
+        right: 34px;
+    }
+    #spotlight div.top div.image-container {
+        width: 70%;
+    }
+    #spotlight div.top {
+        margin-bottom: 30px;
+    }
+    #spotlight div.bottom h3 {
+        font-size: 30px;
+    }
+    #spotlight div.bottom a {
+        padding: 9px 9px;
+        font-size: 14px;
+    }
+    #photo {
+        padding: 30px 0;
+    }
+    #photo div.top h3 {
+        font-size: 30px;
+    }
+    #photo div.top p {
+        font-size: 16px;
+    }
+    #photo div.bottom div.items div.item div.right p {
+        font-size: 16px;
+    }
+    #photo div.bottom div.items div.item div.right a {
+        font-size: 16px;
+    }
+    #about h3 {
+        font-size: 30px;
+    }
+    #about p {
+        font-size: 16px;
+    }
+    #about a {
+        padding: 9px 9px;
+        font-size: 16px;
+    }
+    #testimonial div.top h3 {
+        font-size: 30px;
+    }
+    #testimonial div.top p {
+        font-size: 16px;
+    }
+    #contact div.left h3 {
+        font-size: 30px;
+    }
+    #contact div.left p {
+        font-size: 16px;
+    }
+    footer div.image-container {
+        display: none;
+    }
+}
