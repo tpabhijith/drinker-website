@@ -640,4 +640,7 @@ footer p {
     footer div.image-container {
         display: none;
     }
+    #testimonial div.bottom {
+        margin: -20px;
+    }
 }
